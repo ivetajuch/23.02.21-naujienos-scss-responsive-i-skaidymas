@@ -1,0 +1,90 @@
+@use 'variables/colors';
+@use 'variables/responsive';
+
+.events-wrapper {
+    .event-list {
+        .event-list-item {
+            .event-info {
+                background-color: colors.$black;
+                color: colors.$white;
+                margin-bottom: 60px;
+                padding: 20px;
+                position: relative;
+
+                .event-date {
+                    width: 70px;
+                    height: 70px;
+                    color: colors.$black;
+                    margin-bottom: 12px;
+                    position: absolute;
+                    top: -51px;
+
+                    .day {
+                        font-size: 24px;
+                        font-weight: bolder;
+                        height: calc(100% / 3 * 2);
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        background-color: colors.$white;
+                        border-radius: 15px 15px 0px 0px;
+                    }
+
+                    .month {
+                        height: calc(100% / 3);
+                        font-size: 12px;
+                        color: colors.$white;
+                        background-color: colors.$pink;
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        border-radius: 0px 0px 15px 15px;
+                    }
+                }
+
+                .location {
+                    text-transform: uppercase;
+                    font-size: 10px;
+                    margin-bottom: 3px;
+                }
+
+                .event-title {
+                    font-size: 24px;
+                    font-weight: bolder;
+                }
+
+            }
+
+
+            &.one {
+                img {
+                    position: relative;
+                    z-index: -1;
+                    object-fit: contain;
+                    width: 100%;
+
+                    @include responsive.sm{
+                        width: 100%;
+                     }
+                }
+            }
+        }
+
+        .more-link {
+            width: 100%;
+            background-color: colors.$white;
+            padding: 33px 60px 33px 40px;
+            border-radius: 5px;
+
+            a {
+                text-decoration: none;
+                color: colors.$black;
+                font-size: 24px;
+                font-weight: bolder;
+
+            }
+        }
+    }
+}

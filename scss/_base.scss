@@ -1,0 +1,61 @@
+@use 'variables/colors';
+@use 'variables/responsive';
+
+
+*, *::before,*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: colors.$background;
+}
+
+.site-wrapper {
+  max-width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main {
+    padding: 0 30px;
+    margin: 0 auto;
+    display: flex;
+
+    @include responsive.sm {
+        flex-wrap: wrap;
+     }
+}
+
+.container {
+    &.left-side {
+        width: calc(100% / 3 * 2);
+        padding-right: 30px;
+
+        @include responsive.sm {
+            width: 100%;
+            padding-right: 0px;
+         }
+
+        section {
+            margin-bottom: 60px;         
+        }
+    }
+    &.right-side {
+        section {
+            margin-bottom: 60px;
+        }
+
+        @include responsive.xl {
+            width: 40%;
+        }
+
+        @include responsive.sm {
+            width: 100%;
+         }
+
+        h2 {
+            font-size: 42px;
+            margin: 0px 0px 25px;
+        }
+    }
+    }
