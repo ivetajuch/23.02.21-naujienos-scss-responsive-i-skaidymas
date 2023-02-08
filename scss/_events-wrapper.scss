@@ -1,6 +1,8 @@
 @use 'variables/colors';
 @use 'variables/responsive';
 
+
+
 .events-wrapper {
     .event-list {
         .event-list-item {
@@ -63,11 +65,11 @@
                     position: relative;
                     z-index: -1;
                     object-fit: contain;
-                    width: 100%;
 
-                    @include responsive.sm{
+
+                    @include responsive.sm {
                         width: 100%;
-                     }
+                    }
                 }
             }
         }

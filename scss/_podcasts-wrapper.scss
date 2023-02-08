@@ -1,6 +1,24 @@
 @use 'variables/colors';
 @use 'variables/responsive';
 
+.container {
+    &.right-side {
+        section {
+            margin-bottom: 60px;
+        }
+
+        @include responsive.xl {
+            width: 40%;
+        }
+
+        @include responsive.sm {
+            width: 100%;
+         }
+
+        h2 {
+            font-size: 42px;
+            margin: 0px 0px 25px;
+        }
 .podcasts-wrapper {
     .podcast-item {
         margin-bottom: 30px;
@@ -47,5 +65,7 @@
                 letter-spacing: 2px;
             }
         }
+    }
+}
     }
 }

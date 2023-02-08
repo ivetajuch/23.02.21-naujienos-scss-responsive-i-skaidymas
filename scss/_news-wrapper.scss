@@ -2,7 +2,21 @@
 @use 'variables/colors';
 @use 'variables/responsive';
 
-.news-wrapper {
+.container {
+    &.left-side {
+        width: calc(100% / 3 * 2);
+        padding-right: 30px;
+
+        @include responsive.sm {
+            width: 100%;
+            padding-right: 0px;
+         }
+
+        section {
+            margin-bottom: 60px;         
+        }
+ 
+        .news-wrapper {
     width: 100%;
 
     @include responsive.xl {
@@ -205,4 +219,5 @@
         }
     }
 }
-
+    }
+}

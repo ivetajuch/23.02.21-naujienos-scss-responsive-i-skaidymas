@@ -27,19 +27,6 @@ body {
 }
 
 .container {
-    &.left-side {
-        width: calc(100% / 3 * 2);
-        padding-right: 30px;
-
-        @include responsive.sm {
-            width: 100%;
-            padding-right: 0px;
-         }
-
-        section {
-            margin-bottom: 60px;         
-        }
-    }
     &.right-side {
         section {
             margin-bottom: 60px;
